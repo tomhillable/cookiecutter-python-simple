@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
 import unittest
 from {{cookiecutter.project_slug}} import {{cookiecutter.project_slug}}
 
