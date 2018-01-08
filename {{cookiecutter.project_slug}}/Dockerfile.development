@@ -1,0 +1,9 @@
+FROM python:3
+
+ENV PATH=/env/bin:$PATH
+
+ADD . /service
+
+RUN pip install -r /service/requirements.txt && pip install -r /service/dev_requirements.txt
+
+WORKDIR /service
