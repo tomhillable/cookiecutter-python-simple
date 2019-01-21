@@ -1,9 +1,10 @@
-FROM python:3
+FROM python:3.7
 
 ENV PATH=/env/bin:$PATH
 
 ADD . /service
 
-RUN pip install -r /service/requirements.txt && pip install -r /service/dev_requirements.txt
-
 WORKDIR /service
+
+RUN pip install pipenv
+RUN pipenv install -d
